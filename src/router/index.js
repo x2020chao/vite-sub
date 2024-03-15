@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(qiankunWindow.__POWERED_BY_QIANKUN__ ? '/mana' : '/'),
   routes: [
     {
       path: '/',
